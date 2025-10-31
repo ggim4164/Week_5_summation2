@@ -1,8 +1,8 @@
-# 📘 5주차 1차시 강의 요약
+# 5주차 1차시 강의 요약
 
 ---
 
-## 1️⃣ State Variable 시스템
+## State Variable 시스템
 
 State Variable 시스템은 **스프링, 질량, 감쇠기로 구성된 Spring–Mass–Damper 시스템**으로  
 외력 `r(t)`이 작용할 때 질량의 변위 `y(t)`를 출력으로 보는 모델이다.  
@@ -32,12 +32,11 @@ $$
 따라서 이 시스템은 **질량 M**, **감쇠계수 b**, **스프링상수 k**에 의해 동특성이 결정되며,  
 외력 `r(t)`에 대한 변위응답 `y(t)`를 예측할 수 있는 **상태공간모델(state-space model)** 형태로 표현된다.
 
-![spring-mass-damper](<img width="247" height="309" alt="image" src="https://github.com/user-attachments/assets/3a3b892f-2e12-49fa-a722-122ba2896abc" />
-)
+![spring-mass-damper](img width="247" height="309" alt="Image" src="https://github.com/user-attachments/assets/8bb1f1d7-d475-478a-9311-7b0dff184092" /)
 
 ---
 
-## 2️⃣ RLC 직렬회로의 상태변수 표현
+## RLC 직렬회로의 상태변수 표현
 
 입력 전압 `u(t)`이 인가된 RLC 직렬회로를 상태변수로 표현한다.  
 커패시터 전압과 인덕터 전류를 각각 상태변수 `x₁`, `x₂`로 정의하면  
@@ -64,12 +63,11 @@ $$
 결과적으로 이 RLC 회로는 입력 전류 `u(t)`에 대한 동작을  
 두 개의 1차 미분방정식으로 나타내는 **상태공간 모델** 형태로 정리된다.
 
-![rlc-circuit](<img width="247" height="309" alt="image" src="https://github.com/user-attachments/assets/2275ae21-8de8-4e93-8a93-fd9ca0197d7c" />
-)
+![rlc-circuit](img width="403" height="436" alt="Image" src="https://github.com/user-attachments/assets/9a873291-306b-49b4-9046-cd25e5eeb975" /)
 
 ---
 
-## 3️⃣ 1차 상태방정식의 해
+## 1차 상태방정식의 해
 
 $$
 x(t) = e^{At}x(0) + \int_0^t e^{A(t - \tau)}B u(\tau)d\tau
@@ -81,11 +79,11 @@ $$
 즉, 상태공간 표현을 사용하면 시스템의 응답을  
 **초기 상태의 영향**과 **입력에 의한 반응**으로 명확히 구분하여 이해할 수 있다.
 
-![state-solution](이미지경로3.png)
+![state-solution](img width="392" height="449" alt="Image" src="https://github.com/user-attachments/assets/c9ce8c56-ceb9-42ae-a058-46fb3db013ea" /)
 
 ---
 
-## 4️⃣ 상태공간 표현 (State Space Representation)
+## 상태공간 표현 (State Space Representation)
 
 상태벡터 `x(t)`는 여러 상태변수들을 모은 벡터이며,  
 시스템은 다음과 같이 표현된다.
@@ -100,11 +98,11 @@ $$
 즉, `A`, `B`, `C`, `D` 행렬을 이용하여 입력 `u(t)`, 상태 `x(t)`, 출력 `y(t)` 간의 관계를  
 **행렬 형태**로 나타낸 것이다.
 
-![state-space](이미지경로4.png)
+![state-space](img width="334" height="373" alt="Image" src="https://github.com/user-attachments/assets/5c9af298-095e-451b-9359-a6cbe05a2670" /)
 
 ---
 
-## 5️⃣ 상태전이행렬 (State Transition Matrix)
+## 상태전이행렬 (State Transition Matrix)
 
 상태방정식:
 
@@ -123,11 +121,11 @@ $$
 
 → 전체 해는 **초기 상태의 영향**과 **입력 신호의 영향**이 결합된 형태로 구성된다.
 
-![state-transition](이미지경로5.png)
+![state-transition](img width="384" height="356" alt="Image" src="https://github.com/user-attachments/assets/5352d2fc-f336-4fb3-83bc-16bd82951065" /)
 
 ---
 
-## 6️⃣ 2자유도 질량–스프링–감쇠기 시스템 예시
+## 자유도 질량–스프링–감쇠기 시스템 예시
 
 두 개의 질량이 스프링과 감쇠기로 연결된 **2자유도 시스템**의 상태공간 표현이다.
 
@@ -147,11 +145,11 @@ $$
 행렬 `A`는 각 질량, 스프링, 감쇠기의 상호작용을 포함한다.  
 → 복잡한 2자유도 운동방정식을 행렬 형태의 상태방정식으로 단순화한 예시이다.
 
-![two-mass-system](이미지경로6.png)
+![two-mass-system](img width="384" height="368" alt="Image" src="https://github.com/user-attachments/assets/596e8aaa-db8d-415f-8104-e9e3c4ec2825" /)
 
 ---
 
-## 7️⃣ MATLAB 시뮬레이션 (Example 3.1)
+## MATLAB 시뮬레이션
 
 앞서의 2자유도 질량–스프링–감쇠기 시스템을 MATLAB으로 시뮬레이션하였다.
 
@@ -176,10 +174,10 @@ $$
   **초기변위에 대한 자유진동(free vibration) 응답**을 계산하였다.  
 - 결과 그래프는 **감쇠에 의해 점차 안정되는 진동 특성**을 보여준다.
 
-![matlab-simulation](이미지경로7.png)
+![matlab-simulation](img width="369" height="358" alt="Image" src="https://github.com/user-attachments/assets/a438198e-b94c-4413-baa3-79b011905cc5" /)
 
 ---
 
-> ✍️ **작성자:** 김준호  
-> 💡 **주제:** 상태공간모델 (State-Space Model)  
-> 📅 **5주차 1차시 강의**
+>  **작성자:** 김준호  
+> **주제:** 상태공간모델 (State-Space Model)  
+> **5주차 1차시 강의**
